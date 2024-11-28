@@ -2,7 +2,7 @@
 
 public class ExampleEditorScript
 {
-    [MenuItem("Example Editor Script/Test")]
+    [MenuItem("aRkker's Crap/FengShui")]
     static void Test()
     {
         EditorUtility.DisplayDialog("Example Script", "Opened This Dialog", "OK");

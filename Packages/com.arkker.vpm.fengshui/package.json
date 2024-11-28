@@ -1,0 +1,11 @@
+{
+  "name": "com.arkker.vpm.fengshui",
+  "displayName": "aRkker's Fengshui system",
+  "version": "0.0.1",
+  "unity": "2022.3",
+  "description": "A system for rearranging objects in your world and bringing the changes back to Unity",
+  "author": {
+    "name": "aRkker",
+    "website": "https://www.google.com"
+  }
+}
