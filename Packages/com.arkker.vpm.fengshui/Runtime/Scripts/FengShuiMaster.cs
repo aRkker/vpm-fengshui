@@ -23,6 +23,7 @@ namespace aRkker
 
         public void AddPickup(GameObject obj)
         {
+            Debug.Log("Adding tracking to object: " + obj.name);
             GameObject[] newObjectsWithPickups = new GameObject[objectsWithPickups.Length + 1];
             for (int i = 0; i < objectsWithPickups.Length; i++)
             {

@@ -46,29 +46,36 @@ namespace aRkker
 
             if (fsm == null)
             {
-                return true;
+                Debug.LogWarning("No FengShuiMaster found in the scene.");
+                return true; // Continue build
             }
 
             VRCPickup[] pickups = GameObject.FindObjectsOfType<VRCPickup>();
-
-            Debug.Log("This many pickups found: " + pickups.Length);
+            Debug.Log($"Found {pickups.Length} pickups in the scene.");
 
             foreach (VRCPickup pickup in pickups)
             {
                 if (pickup == null) continue;
 
+                // Check if already exists
                 if (Array.Exists(fsm.objectsWithPickups, obj => obj == pickup.gameObject))
                 {
-                    Debug.Log("Pickup already exists in FengShuiMaster");
+                    Debug.Log($"Pickup '{pickup.gameObject.name}' already exists in FengShuiMaster.");
                     continue;
                 }
 
+                // Add the new pickup
                 fsm.AddPickup(pickup.gameObject);
-                Debug.Log("Added pickup to FengShuiMaster");
+                Debug.Log($"Added pickup '{pickup.gameObject.name}' to FengShuiMaster.");
             }
 
-            return true;
+            // Mark the FengShuiMaster as dirty to ensure it saves the updated array
+            UnityEditor.EditorUtility.SetDirty(fsm);
+            UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(fsm.gameObject.scene);
+
+            return true; // Continue build
         }
+
 
         [MenuItem("FengShui/Import VRChat Log file")]
         static void ImportVRChatLogFile()
@@ -85,7 +92,13 @@ namespace aRkker
                 return;
             }
 
-            string[] lines = File.ReadAllLines(path);
+            string[] lines;
+            using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            using (StreamReader reader = new StreamReader(fileStream))
+            {
+                var fileContent = reader.ReadToEnd();
+                lines = fileContent.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            }
             bool isDumping = false;
             List<string> pickupLines = new List<string>();
             List<string> lastPickupLines = new List<string>();

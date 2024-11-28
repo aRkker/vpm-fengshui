@@ -298,8 +298,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339478095}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.02367006, y: 0.042570107, z: 0.0010100026, w: -0.99881256}
-  m_LocalPosition: {x: -0.11, y: 0.9, z: 3.76}
+  m_LocalRotation: {x: 0.033569954, y: -0.3859695, z: -0.035449956, w: -0.9212188}
+  m_LocalPosition: {x: 4.64, y: 1.07, z: -1.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -732,8 +732,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881329204}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.74, y: 0.8, z: 3.32}
+  m_LocalRotation: {x: -0.040019955, y: -0.6739993, z: -0.03472996, w: 0.7368292}
+  m_LocalPosition: {x: -5.76, y: 1.43, z: 1.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1082,6 +1082,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4329708281694739561, guid: cee0c8113272c1e479a2d313fbef05e8,
         type: 3}
+    - target: {fileID: 4329708281694739561, guid: cee0c8113272c1e479a2d313fbef05e8,
+        type: 3}
+      propertyPath: objectsWithPickups.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329708281694739561, guid: cee0c8113272c1e479a2d313fbef05e8,
+        type: 3}
+      propertyPath: objectsWithPickups.Array.data[0]
+      value: 
+      objectReference: {fileID: 339478095}
+    - target: {fileID: 4329708281694739561, guid: cee0c8113272c1e479a2d313fbef05e8,
+        type: 3}
+      propertyPath: objectsWithPickups.Array.data[1]
+      value: 
+      objectReference: {fileID: 1881329204}
     - target: {fileID: 5437444989734684273, guid: cee0c8113272c1e479a2d313fbef05e8,
         type: 3}
       propertyPath: m_LocalPosition.x
