@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
-  m_Name: FengShuiMaster
+  m_Name: FengShui
   m_EditorClassIdentifier: 
   serializedUdonProgramAsset: {fileID: 0}
   udonAssembly: 
   assemblyError: 
-  sourceCsScript: {fileID: 11500000, guid: 190216a5ab744c443a01e506d665204c, type: 3}
+  sourceCsScript: {fileID: 11500000, guid: d36eb27dc68fcf241b0075f698570531, type: 3}
   scriptVersion: 0
   compiledVersion: 0
   behaviourSyncMode: 0

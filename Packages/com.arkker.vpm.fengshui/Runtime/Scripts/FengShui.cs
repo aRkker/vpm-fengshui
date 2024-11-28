@@ -4,7 +4,7 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
-public class FengShuiMaster : UdonSharpBehaviour
+public class FengShui : UdonSharpBehaviour
 {
     void Start()
     {
